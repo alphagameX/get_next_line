@@ -21,7 +21,7 @@ char* substr(char *str, int start, int len)
     char *new;
 
     if(!(new = malloc(sizeof(char) * len + 1)))
-        return NULL;
+        return (NULL);
     while(str[start] && start < len)
     {
         new[start] = str[start];
@@ -37,7 +37,7 @@ int get_next_line(int fd, char **line) {
     static char *str;
     char *temp;
 
-    if(!fd || fd < 0 || !line || BUFFER_SIZE <= 0 || !(temp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
+    if(fd < 0 || BUFFER_SIZE <= 0 || !(temp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
         return (-1);
     
     while (has_return(str) == 0)
@@ -63,6 +63,7 @@ char *read_line(char *str, char **line)
 {
     int i;
     i = 0;
+
 
     while(str[i])
     {
