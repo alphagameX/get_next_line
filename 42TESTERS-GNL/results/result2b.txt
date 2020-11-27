@@ -76,7 +76,7 @@ Right number of lines
 ========= TEST 2 : Empty Lines ===========
 ==========================================
 
-|Cette ligne se termine par un point.
+|NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNnCette ligne se termine par un point.
 |La ligne suivante est vide.
 |
 |Les 2 lignes suivantes sont vides
@@ -122,8 +122,8 @@ Right number of lines
 ==========================================
 
 |answer to life the universe and everythin
-|answer to life the universe and everything
-|answer to life the universe and everything-
+|answer to life the universe and everythinanswer to life the universe and everything
+|answer to life the universe and everythinanswer to life the universe and everythinganswer to life the universe and everything-
 
 Right number of lines
 
@@ -131,31 +131,31 @@ Right number of lines
 ============= TEST 7 : Marge =============
 ==========================================
 
-   OOOO
- OOOOOOOOO
-OOOOOOOOOOOO
-OOOOOOOOOOOOO
-OOOOOOOOOOOOOO
-OOOOOOOOOOOOOO
- OOOOOOOOOOOOOO
- OOOOOOOOOOOOOO
- OOOOOOOOOOOOOO
-  OOOOOOOOOOOOOO
-  OOOOOOOOOOOOOO
-  OOOOOOOOOOOOOO
-  OOOOOOOOOOOOOO
-   OOOOOOOOOOOOOO
-   OOOOOOOOOOOOOO
-   OOOOO \_| \_|O
-   OOOO \/  \/  \
-   OOOO (o   )o  )
-   O/c   \__/ --.
-   O\_   ,     -'
-    O|  '\_______)
-     |       _)
-     |      |
-     oooooooo
-    /        \
+answer to life the universe and everythinanswer to life the universe and everythinganswer to life the universe and everything-|    OOOO            |
+|  OOOOOOOOO         |
+| OOOOOOOOOOOO       |
+| OOOOOOOOOOOOO      |
+| OOOOOOOOOOOOOO     |
+| OOOOOOOOOOOOOO     |
+|  OOOOOOOOOOOOOO    |
+|  OOOOOOOOOOOOOO    |
+|  OOOOOOOOOOOOOO    |
+|   OOOOOOOOOOOOOO   |
+|   OOOOOOOOOOOOOO   |
+|   OOOOOOOOOOOOOO   |
+|   OOOOOOOOOOOOOO   |
+|    OOOOOOOOOOOOOO  |
+|    OOOOOOOOOOOOOO  |
+|    OOOOO \_| \_|O  |
+|    OOOO \/  \/  \  |
+|    OOOO (o   )o  ) |
+|    O/c   \__/ --.  |
+|    O\_   ,     -'  |
+|     O|  '\_______) |
+|      |       _)    |
+|      |      |      |
+|      oooooooo      |
+|     /        \     |
 
 Right number of lines
 
@@ -163,5 +163,5 @@ Right number of lines
 ========= TEST 8 : Wrong Input ===========
 ==========================================
 
-Well Done, you return -1 if no FD
+Well Done, you return -1 if read fails
 

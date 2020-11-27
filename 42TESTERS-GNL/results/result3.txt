@@ -76,7 +76,7 @@ Right number of lines
 ========= TEST 2 : Empty Lines ===========
 ==========================================
 
-|NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNnCette ligne se termine par un point.
+|Cette ligne se termine par un point.
 |La ligne suivante est vide.
 |
 |Les 2 lignes suivantes sont vides
@@ -122,8 +122,8 @@ Right number of lines
 ==========================================
 
 |answer to life the universe and everythin
-|answer to life the universe and everythinanswer to life the universe and everything
-|answer to life the universe and everythinanswer to life the universe and everythinganswer to life the universe and everything-
+|answer to life the universe and everything
+|answer to life the universe and everything-
 
 Right number of lines
 
@@ -131,7 +131,7 @@ Right number of lines
 ============= TEST 7 : Marge =============
 ==========================================
 
-answer to life the universe and everythinanswer to life the universe and everythinganswer to life the universe and everything-   OOOO
+   OOOO
  OOOOOOOOO
 OOOOOOOOOOOO
 OOOOOOOOOOOOO
@@ -142,7 +142,7 @@ OOOOOOOOOOOOOO
  OOOOOOOOOOOOOO
   OOOOOOOOOOOOOO
   OOOOOOOOOOOOOO
-    OOOOOOOOOOOOOO
+  OOOOOOOOOOOOOO
   OOOOOOOOOOOOOO
    OOOOOOOOOOOOOO
    OOOOOOOOOOOOOO

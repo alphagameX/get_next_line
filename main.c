@@ -5,16 +5,19 @@
 int main(int argc, char **argv) {
    
     int fd; 
-    char **line;
+    char *line;
 
     fd = open("file", O_RDONLY);
  
-    while(get_next_line(fd, line) == 1) {
-        printf("%s\n", *line); 
+    while(get_next_line(fd, &line) == 1) {
+        printf("%s\n", line); 
+        free(line);
     }
 
-    printf("%s\n", *line);
+    printf("%s\n", line);
+    free(line);
 
+    // system("leaks a.out");
     return (0);
 }
 
