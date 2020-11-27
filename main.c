@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     printf("%s\n", line);
     free(line);
 
-    // system("leaks a.out");
+    system("leaks a.out");
     return (0);
 }
 

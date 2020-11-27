@@ -16,7 +16,7 @@ int has_return(char *str)
     return (0);
 }
 
-char* substr(char *str, int start, int len)
+char* substr(char *str, int start, int len, int freed)
 {
     char *new;
 
@@ -28,6 +28,10 @@ char* substr(char *str, int start, int len)
         start++;
     }
     new[start] = '\0';
+    if(freed == 1) {
+        *str = '\0';
+        free(str);
+    }
     return (new);
 }
 
@@ -38,6 +42,7 @@ int get_next_line(int fd, char **line)
     int i = 0;
     static char *str;
     char *temp;
+    char *t;
 
     if(fd < 0 || !line || BUFFER_SIZE <= 0 || !(temp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
         return (-1);
@@ -50,17 +55,20 @@ int get_next_line(int fd, char **line)
         str = ft_strjoin(str, temp);
     }
     free(temp);
+
     if(has_return(str) == 0)
     {
-        *line = substr(str, 0, ft_strlen(str));
+        *line = substr(str, 0, ft_strlen(str), 0);
         *str = '\0';
+        free(str);
         return (0);
     }
+
     while(str[i] != '\n')
         i++;
-    //str = read_line(str, line);
-    *line = substr(str, 0, i);
-    str = substr(str + (i + 1), 0 , ft_strlen(str) - i);
+    
+    *line = substr(str, 0, i, 0);
+    str = substr(str + (i + 1), 0 , ft_strlen(str) - i, 1);
     return (1);
 }
 
