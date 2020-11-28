@@ -2,7 +2,7 @@
 # define GET_NEXT_LINE_H
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 9999
+# define BUFFER_SIZE 10
 #endif
 
 #include <stdlib.h>
@@ -16,6 +16,6 @@ int     get_next_line(int fd, char **line);
 char	*ft_strjoin(char *s1, char *s2);
 void    *ft_memmove(void *dst, const void *src, size_t len);
 int		ft_strlen(char *str);
-// char    *read_line(char *str, char **line); 
+int     pos_n(char *str);
 
 #endif
