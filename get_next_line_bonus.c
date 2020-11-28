@@ -1,4 +1,4 @@
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int has_return(char *str)
 {
@@ -44,13 +44,13 @@ char* substr(char *str, int start, int len, int is_free)
 int get_next_line(int fd, char **line)
 {
     int ret;
-    static char *str;
+    static char *str[MAX_FD];
     char *temp;
 
     if(fd < 0 || !line || BUFFER_SIZE <= 0 ||
              !(temp = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
         return (-1);
-    while (has_return(str) == 0 && (ret = read(fd, temp, BUFFER_SIZE)))
+    while (has_return(str[fd]) == 0 && (ret = read(fd, temp, BUFFER_SIZE)))
     {   
         if(ret == -1)
         {
@@ -58,13 +58,13 @@ int get_next_line(int fd, char **line)
             return (-1);
         }
         temp[ret] = '\0';
-        str = ft_strjoin(str, temp);
+        str[fd] = ft_strjoin(str[fd], temp);
     }
     free(temp);
-    if(!has_return(str)) 
-        return(last_line(line, str));
-    *line = substr(str, 0, pos_n(str), 0);
-    str = substr(str, pos_n(str) + 1 , ft_strlen(str) - pos_n(str), 1);
+    if(!has_return(str[fd])) 
+        return(last_line(line, str[fd]));
+    *line = substr(str[fd], 0, pos_n(str[fd]), 0);
+    str[fd] = substr(str[fd], pos_n(str[fd]) + 1 , ft_strlen(str[fd]) - pos_n(str[fd]), 1);
     return (1);
 }
 
