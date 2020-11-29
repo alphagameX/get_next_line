@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atinseau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/29 14:54:42 by atinseau          #+#    #+#             */
+/*   Updated: 2020/11/29 14:54:47 by atinseau         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*ft_strjoin(char *s1, char *s2)
@@ -23,13 +35,11 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (new);
 }
 
-
-
 int		ft_strlen(char *str)
 {
 	int i;
 
-	if(!str)
+	if (!str)
 		return (0);
 	i = 0;
 	while (str[i] != '\0')
